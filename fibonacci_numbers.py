@@ -12,3 +12,12 @@
 
 
 # *** your code here ***
+def fib(num):
+    list = [0,1]
+    if num < 2:
+        list = [0]
+    for i in range(num - 2):
+        list.insert((i + 2), (list[i] + list[i + 1]))
+    return list
+
+print(fib(23))

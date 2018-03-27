@@ -8,3 +8,12 @@
 
 
 # *** your code here ***
+test = [1,2,1,2,3,7,3,5,5,6,7,4,6]
+
+def singler(arr):
+    arr.sort()
+    while (arr[len(arr) - 1] == arr[len(arr) - 2]):
+        arr.pop()
+        arr.pop()
+    print(arr[len(arr)-1], " is the loneliest number")
+singler(test)

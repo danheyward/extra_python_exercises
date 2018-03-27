@@ -36,3 +36,21 @@
 
 
 # *** your code here ***
+from random import *
+
+def guess_num():
+    answer = randint(1, 100)
+    guess = int(input("I'm thinking of a number between 1 and 100. What is it? "))
+    turns = 1
+    if guess == answer:
+        print(f"That's right! The correct number is {answer}. You only needed 1 guess, well done.")
+    else:
+        while guess != answer:
+            turns += 1
+            if guess > answer:
+                guess = int(input(f"The correct number is lower than {guess}! Try again."))
+            else:
+                guess = int(input(f"The correct number is higher than {guess}! Try again."))
+        print(f"That's right! The correct number is {answer}. You only needed {turns} guesses, well done.")
+
+guess_num()

@@ -26,3 +26,10 @@
 
 
 # *** your code here ***
+
+def pyramid(num):
+    count = 1
+    while count <= num:
+        print(" " * (num - count) + "#" * count, "#" * count + " " * (num - count))
+        count += 1
+pyramid(10)
